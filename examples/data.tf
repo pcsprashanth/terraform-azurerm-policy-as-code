@@ -1,6 +1,8 @@
 data azurerm_client_config current {}
 
-data azurerm_subscription current {}
+data azurerm_subscription current {
+  name = "Azure subscription 1"
+}
 
 # Org Management Group
 data azurerm_management_group org {

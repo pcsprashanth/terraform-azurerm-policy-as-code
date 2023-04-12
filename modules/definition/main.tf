@@ -5,7 +5,7 @@ resource azurerm_policy_definition def {
   policy_type  = "Custom"
   mode         = local.mode
 
-  management_group_id = var.management_group_id
+ subscription_id = var.subscription_id
 
   metadata    = jsonencode(local.metadata)
   parameters  = length(local.parameters) > 0 ? jsonencode(local.parameters) : null
