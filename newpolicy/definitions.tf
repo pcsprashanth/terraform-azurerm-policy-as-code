@@ -5,3 +5,11 @@ module "deny_resource_types" {
   policy_category     = "General"
   management_group_id = data.azurerm_subscription.current.id
 }
+
+module "whitelist_regions" {
+  source              = "..//modules/definition"
+  policy_name         = "whitelist_regions"
+  display_name        = "Whitelist Azure Regions"
+  policy_category     = "General"
+  management_group_id = data.azurerm_subscription.current.id
+}
