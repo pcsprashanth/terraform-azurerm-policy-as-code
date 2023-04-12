@@ -4,7 +4,7 @@ on:
     branches: [main]
   pull_request:
     paths:
-      - "newpolicy"
+      - "newpolicy1"
   workflow_dispatch:
 
 jobs:
@@ -27,13 +27,13 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init -no-color
-        working-directory: newpolicy
+        working-directory: newpolicy1
 
       - name: Terraform Apply
         id: apply
         if: ${{ success() }}
         run: terraform apply
-        working-directory: newpolicy
+        working-directory: newpolicy1
 
       - name: Azure Login
         uses: azure/login@v1
