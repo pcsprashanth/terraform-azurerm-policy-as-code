@@ -31,7 +31,6 @@ output definition {
     display_name        = local.display_name
     description         = local.description
     mode                = var.policy_mode
-    subscription_id     = var.sub_id
     metadata            = jsonencode(local.metadata)
     parameters          = jsonencode(local.parameters)
     policy_rule         = jsonencode(local.policy_rule)
