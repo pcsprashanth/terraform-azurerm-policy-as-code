@@ -1,4 +1,4 @@
-variable "sub_id" {
+variable "sub_node" {
   type        = string
   description = "The management group scope at which the policy will be defined. Defaults to current Subscription if omitted. Changing this forces a new resource to be created."
   default     = "/subscriptions/25229114-2ec3-4b44-bb5b-649a554894bc"
