@@ -25,6 +25,9 @@ jobs:
       - name: Setup TFLint
         uses: terraform-linters/setup-tflint@v3.0.0
 
+      - name: Tflint run
+        run: tflint 
+
       - name: Terraform Format
         id: fmt
         run: terraform fmt -check
