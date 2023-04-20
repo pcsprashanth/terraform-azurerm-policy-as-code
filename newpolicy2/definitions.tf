@@ -7,7 +7,7 @@ module "deny_resource_types" {
 
 module "whitelist_regions" {
   source              = "..//modules/definition"
-  policy_name         = "whitelist_regions1"
+  policy_name         = "whitelist_regions"
   display_name        = "Whitelist Azure Regions"
   policy_category     = "General"
 }
