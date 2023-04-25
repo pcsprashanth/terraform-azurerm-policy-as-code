@@ -1,3 +1,9 @@
+variable "sub_node" {
+  type        = string
+  description = "The subscription scope at which the policy will be defined. Defaults to current Subscription if omitted. Changing this forces a new resource to be created."
+  default     = "/subscriptions/25229114-2ec3-4b44-bb5b-649a554894bc"
+}
+
 variable management_group_id {
   type        = string
   description = "The management group scope at which the initiative will be defined. Defaults to current Subscription if omitted. Changing this forces a new resource to be created. Note: if you are using azurerm_management_group to assign a value to management_group_id, be sure to use name or group_id attribute, but not id."
@@ -110,5 +116,5 @@ locals {
   metadata = coalesce(var.initiative_metadata, merge({ category = var.initiative_category },{ version = var.initiative_version }))
 
   # manually generate the initiative Id to prevent "Invalid for_each argument" on potential consumer modules
-  initiative_id = var.management_group_id != null ? "${var.management_group_id}/providers/Microsoft.Authorization/policySetDefinitions/${var.initiative_name}" : azurerm_policy_set_definition.set.id
+  initiative_id = var.sub_node_id != null ? "${var.management_group_id}/providers/Microsoft.Authorization/policySetDefinitions/${var.initiative_name}" : azurerm_policy_set_definition.set.id
 }
