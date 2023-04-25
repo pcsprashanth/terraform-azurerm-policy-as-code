@@ -93,3 +93,4 @@ module "inherit_resource_group_tags_modify" {
   policy_mode         = "Indexed"
   management_group_id = data.azurerm_management_group.org.id
 }
+
