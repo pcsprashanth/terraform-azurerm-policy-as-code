@@ -4,7 +4,7 @@ resource azurerm_policy_set_definition set {
   description  = var.initiative_description
   policy_type  = "Custom"
 
-  management_group_id = var.management_group_id
+  subscription_id = var.sub_node_id
 
   metadata   = jsonencode(local.metadata)
   parameters = length(local.parameters) > 0 ? jsonencode(local.parameters) : null
