@@ -1,10 +1,10 @@
 name: cd
 on:
   push:
-    branches: [main]
+    branches: [ "*/*"]
   pull_request:
     paths:
-      - "newpolicy2"
+      - "newpolicy2/*"
   workflow_dispatch:
 
 jobs:
