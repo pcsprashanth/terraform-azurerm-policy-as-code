@@ -1,7 +1,7 @@
 name: cd
 on:
   push:
-    branches: [feature]
+    branches: [ "*/*"]
   pull_request:
     paths:
       - "newpolicy2/*"
