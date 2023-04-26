@@ -1,9 +1,11 @@
 name: ci
 
 on:
-  push:
-    branches: [newpolicy2]
-  pull_request:
+ push:
+    branches: [ "*/*" ]
+ pull_request:
+    branches: [ "branches/*" ]
+
 
 jobs:
   ci:
