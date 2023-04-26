@@ -4,12 +4,6 @@ variable "sub_node" {
   default     = "/subscriptions/25229114-2ec3-4b44-bb5b-649a554894bc"
 }
 
-variable management_group_id {
-  type        = string
-  description = "The management group scope at which the initiative will be defined. Defaults to current Subscription if omitted. Changing this forces a new resource to be created. Note: if you are using azurerm_management_group to assign a value to management_group_id, be sure to use name or group_id attribute, but not id."
-  default     = null
-}
-
 variable initiative_name {
   type        = string
   description = "Policy initiative name. Changing this forces a new resource to be created"
