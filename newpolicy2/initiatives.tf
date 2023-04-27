@@ -7,7 +7,7 @@ module "Azure_Security_Benchmark" {
   
  # Populate member_definitions with a for loop (explicit)
   member_definitions = [
-    module.Azure_Security_Benchmark["Log Analytics agent should be installed on your virtual machine for Microsoft Defender for Cloud monitoring"].definition,
-    module.Azure_Security_Benchmark["Manage certificate validity period"].definition,
+    module.["Log Analytics agent should be installed on your virtual machine for Microsoft Defender for Cloud monitoring"].definition,
+    module."Manage certificate validity period".definition
   ]
 }
