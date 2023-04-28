@@ -8,6 +8,6 @@ module "Azure_Security_Benchmark" {
  # Populate member_definitions with a for loop (explicit)
   member_definitions = [
     module.whitelist_regions.definition,
-    module.whitelist_resources.definition
+    module.storage_min_tls.definition
   ]
 }
