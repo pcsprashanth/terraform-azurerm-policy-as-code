@@ -11,3 +11,9 @@ module "whitelist_regions" {
   display_name        = "Whitelist Azure Regions"
   policy_category     = "General"
 }
+module "whitelist_resources" {
+  source              = "..//modules/definition"
+  policy_name         = "whitelist_resources"
+  display_name        = "Allowed resources"
+  policy_category     = "General"
+}
