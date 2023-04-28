@@ -11,3 +11,4 @@ module "whitelist_regions" {
   display_name        = "Whitelist Azure Regions"
   policy_category     = "General"
 }
+
