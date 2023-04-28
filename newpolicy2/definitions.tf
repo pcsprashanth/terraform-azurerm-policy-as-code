@@ -11,3 +11,10 @@ module "whitelist_regions" {
   display_name        = "Whitelist Azure Regions"
   policy_category     = "General"
 }
+
+module "storage_min_tls" {
+  source              = "..//modules/definition"
+  policy_name         = "/providers/Microsoft.Authorization/policyDefinitions/fe83a0eb-a853-422d-aac2-1bffd182c5d0"
+  display_name        = "Storage Accounts should have min tls"
+  policy_category     = "General"
+}
