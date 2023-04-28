@@ -23,5 +23,4 @@ module "deny_nat_rules_firewalls" {
   policy_name         = "deny_nat_rules_firewalls"
   display_name        = "deny_nat_rules_firewalls"
   policy_category     = "General"
-
 }
