@@ -14,7 +14,7 @@ module "whitelist_regions" {
 
 module "storage_min_tls" {
   source              = "..//modules/definition"
-  policy_name         = "/providers/Microsoft.Authorization/policyDefinitions/fe83a0eb-a853-422d-aac2-1bffd182c5d0"
+  policy_name         = "storage_min_tls"
   display_name        = "Storage Accounts should have min tls"
   policy_category     = "General"
 }
