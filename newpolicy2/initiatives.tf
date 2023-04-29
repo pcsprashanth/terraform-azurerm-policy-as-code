@@ -1,4 +1,4 @@
-module "Azure_Security_Benchmark" {
+module "Azure_Security1_Benchmark" {
   source                  = "..//modules/initiative"
   initiative_name         = "Azure_Security1_Benchmark"
   initiative_display_name = "[Security123]: Azure Security BenchMark"
@@ -8,6 +8,7 @@ module "Azure_Security_Benchmark" {
  # Populate member_definitions with a for loop (explicit)
   member_definitions = [
     module.whitelist_regions.definition,
-    module.storage_min_tls.definition
+    module.storage_min_tls.definition,
+    module.deny_nic_public_ip.definition
   ]
 }
