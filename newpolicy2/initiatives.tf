@@ -7,6 +7,6 @@ module "Azure_Security1_Benchmark" {
   
  # Populate member_definitions with a for loop (explicit)
   member_definitions = [
-    terraform import module.whitelist_regions.definition
+    terraform import module.whitelist_regions.definition,
   ]
 }
